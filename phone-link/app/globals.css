@@ -1,0 +1,78 @@
+:root {
+  --bg: #0f1115;
+  --card: #181b22;
+  --border: #2a2f3a;
+  --text: #eef0f4;
+  --muted: #9aa3b2;
+  --accent: #4f8cff;
+  --danger: #ff6b6b;
+  --ok: #4cd08a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 48px 16px;
+}
+
+h1 { font-size: 1.6rem; margin: 0 0 8px; }
+h2 { font-size: 1.1rem; margin: 28px 0 8px; }
+p { color: var(--muted); margin: 0 0 16px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+label { display: block; font-size: 0.9rem; margin-bottom: 6px; }
+
+input[type='tel'], input[type='text'], textarea, .linkbox {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font: inherit;
+}
+
+.linkbox { word-break: break-all; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.85rem; user-select: all; }
+
+button, .btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 18px;
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+button.danger { background: var(--danger); }
+button.secondary, .btn.secondary { background: transparent; border: 1px solid var(--border); color: var(--text); }
+
+.msg { padding: 10px 14px; border-radius: 10px; margin: 12px 0; font-size: 0.9rem; }
+.msg.err { background: rgba(255, 107, 107, 0.12); color: var(--danger); }
+.msg.ok { background: rgba(76, 208, 138, 0.12); color: var(--ok); }
+
+.number { font-size: 2.2rem; font-weight: 700; text-align: center; margin: 8px 0 4px; word-break: break-word; }
+.center { text-align: center; }
+.small { font-size: 0.8rem; color: var(--muted); }
+.small a { color: var(--muted); }
+.hp { position: absolute; left: -9999px; height: 0; width: 0; opacity: 0; }
